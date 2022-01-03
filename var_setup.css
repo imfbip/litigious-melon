@@ -1,0 +1,852 @@
+/* Version: 0.9.73 */
+
+:root {
+
+	/*** BEGIN SETUP ***/
+
+	--root-font-size: 62.5%;
+
+	/***
+	VIEWPORT VARIABLES
+	Match these to the viewport width you set in Oxygen global settings.
+	***/
+
+		--vp-min: 32; /* Viewport Min Size in REM (32 = 320px) */
+		--vp-max: 128; /* Viewport Max Size in REM (128 = 1280px) */
+
+	/*
+	GLOBAL COLOR SETUP (HSL)
+	Set the global colors below using HSL variables.
+	You can quickly get the HSL values for a color by pasting its hex code into Google search.
+	*/
+
+		/* PRIMARY COLOR HSL VALUES */
+    --primary-h: 359.09090909091;
+    --primary-s: 82.5%;
+    --primary-l: 31.372549019608%;
+
+		/* SECONDARY COLOR HSL VALUES */
+    --secondary-h: 258;
+    --secondary-s: 12.820512820513%;
+    --secondary-l: 84.705882352941%;
+
+		/* ACCENT COLOR HSL VALUES */
+    --accent-h: 76.95652173913;
+    --accent-s: 71.875%;
+    --accent-l: 87.450980392157%;
+
+		/* BASE COLOR HSL VALUES */
+    --base-h: 209.14285714286;
+    --base-s: 89.74358974359%;
+    --base-l: 7.6470588235294%;
+
+		/* SHADE COLOR HSL VALUES
+		Defaulted to black/white & generates grays.
+		Change these values if you want to tint your greys.
+		If you don't need grey shades, you can use this as an alternate base color.
+		*/
+
+		--shade-h: 0;
+		--shade-s: 0%;
+		--shade-l: 10.980392156863%;
+
+	/***
+	BASE TEXT SIZE
+	Base text sizes are used to calculate the fluid text and heading styles. Adjust accordingly.
+	Headings use same values from H6 (xs) to H1 (xxl).
+	***/
+
+		--base-text-desk: 1.8;
+		--base-text-mob: 1.6;
+
+		/* Mobile Text Protection
+		XS and S text sizes are protected by a max() function.
+		This ensures they never get smaller than the below values.
+		Insert a value with unit attached.
+		1rem = 10px.
+		*/
+
+		--text-xs-stop: 1rem;
+		--text-s-stop: 1.1rem;
+
+	/***
+	TEXT SCALE
+	The text scale controls the progression of text sizes.
+	1.067 - Minor Second
+	1.125 - Major Second
+	1.200 - Minor Third
+	1.250 - Major Third
+	1.333 - Perfect Fourth
+	1.414 - Augmented Fouth
+	1.500 - Perfect Fifth
+	1.618 - Golden Ratio
+
+	Most websites should use 1.200, 1.250, 1.333, and 1.414.
+	Other scales will produce more extreme results (but may be suitable in some cases).
+	***/
+
+		--text-scale: 1.414;
+		--mob-text-scale: 1.2;
+		--text-multiplier: 1.5; /* Controls the .text--larger class */
+
+
+	/***
+	FLUID SPACING SYSTEM
+	Base spacing will adjust all spacing globally.
+	The difference between base-space and base-space-min controls the rate of change between desktop and mobile.
+	space-scale controls the variance between each size relative to the others.
+	space-adjust-section controls the amount of top/bottom white space in sections.
+	mob-space-adjust-section offers further tightening of spacing on mobile devices (lower = tighter).
+	***/
+
+		--base-space: 3;
+		--base-space-min: 2.4;
+		--space-scale: 1.5;
+		--mob-space-scale: 1.3; /* Mobile space scale factor */
+		--space-adjust-section: 4; /* Adjusts section padding on Y axis) */
+		--mob-space-adjust-section: 3; /* Mobile-specific section padding adjustment */
+
+		/* DEFAULT LEFT & RIGHT SECTION & HEADER PADDING */
+		--section-padding-x: var(--space-m);
+
+	/***
+	DEFAULT BUTTON STYLING
+	Set the default button style.
+	***/
+
+		/*** SOLID BUTTON STYLE DEFAULTS ***/
+
+		/* BUTTON BACKGROUND COLORS */
+		--btn-primary-bg: var(--primary);
+		--btn-secondary-bg: var(--secondary);
+		--btn-accent-bg: var(--accent);
+		--btn-base-bg: var(--base);
+		--btn-white-bg: var(--shade-white);
+		--btn-black-bg: var(--shade-black);
+
+		/* BUTTON TEXT COLORS */
+		--btn-primary-text: var(--primary-ultra-light);
+		--btn-secondary-text: var(--secondary-ultra-light);
+		--btn-accent-text: var(--accent-ultra-light);
+		--btn-base-text: var(--base-ultra-light);
+		--btn-white-text: var(--shade-black);
+		--btn-black-text: var(--shade-white);
+
+		/* BUTTON BORDER COLORS */
+		--btn-primary-border-color: var(--primary);
+		--btn-secondary-border-color: var(--secondary);
+		--btn-accent-border-color: var(--accent);
+		--btn-base-border-color: var(--base);
+		--btn-white-border-color: var(--shade-white);
+		--btn-black-border-color: var(--shade-black);
+
+		/* BUTTON HOVER BACKGROUND COLOR */
+		--btn-primary-hover: var(--primary-hover);
+		--btn-secondary-hover: var(--secondary-hover);
+		--btn-accent-hover: var(--accent-hover);
+		--btn-base-hover: var(--base-hover);
+		--btn-white-hover: var(--primary-hover); /* Set white button hover color */
+		--btn-black-hover: var(--primary-hover); /* Set black button hover color */
+
+		/* BUTTON HOVER TEXT COLOR */
+		--btn-primary-hover-text: var(--primary-ultra-light);
+		--btn-secondary-hover-text: var(--secondary-ultra-light);
+		--btn-accent-hover-text: var(--accent-ultra-light);
+		--btn-base-hover-text: var(--base-ultra-light);
+		--btn-white-hover-text: var(--shade-white);
+		--btn-black-hover-text: var(--shade-white);
+
+		/* BUTTON HOVER BORDER COLOR */
+		--btn-primary-hover-border-color: var(--primary-hover);
+		--btn-secondary-hover-border-color: var(--secondary-hover);
+		--btn-accent-hover-border-color: var(--accent-hover);
+		--btn-base-hover-border-color: var(--base-hover);
+		--btn-white-hover-border-color: var(--shade-black);
+		--btn-black-hover-border-color: var(--shade-white);
+
+		/* OTHER BUTTON STYLING */
+		--btn-border-size: 0.25rem;
+		--btn-pad-y: 0.8em; /* Default top/bottom padding */
+		--btn-pad-x: 1.3em; /* Default left/right padding */
+		--btn-radius: 0; /* Default button radius */
+
+		/*** OUTLINE BUTTON STYLE DEFAULTS ***/
+
+		--outline-btn-border-size: 0.25rem; /* Set outline button border width */
+
+		/* OUTLINE BUTTON TEXT COLOR */
+		--primary-outline-btn-text: var(--primary);
+		--secondary-outline-btn-text: var(--secondary);
+		--base-outline-btn-text: var(--base);
+		--accent-outline-btn-text: var(--accent);
+		--white-outline-btn-text: var(--shade-white);
+		--black-outline-btn-text: var(--shade-black);
+
+		/* OUTLINE BUTTON HOVER TEXT COLOR */
+		--primary-outline-hover-text: var(--primary-ultra-light);
+		--secondary-outline-hover-text: var(--secondary-ultra-light);
+		--base-outline-hover-text: var(--base-ultra-light);
+		--accent-outline-hover-text: var(--accent-ultra-light);
+		--white-outline-hover-text: var(--primary-ultra-light);
+		--black-outline-hover-text: var(--primary-ultra-light);
+
+	/***
+	BORDER RADIUS SCALE
+	Set the default scale for border radius.
+	***/
+
+		--base-radius: 1rem;
+		--radius-scale: 1.5;
+
+	/***
+	TOOLTIP DEFAULTS
+	Set the default scale for border radius.
+	***/
+
+		--tooltip-bg: var(--base);
+		--tooltip-text-size: var(--text-s);
+		--tooltip-text-color: var(--shade-white);
+		--tooltip-width: 24rem; /* Default width of tooltip pop-up */
+		--tooltip-underline-thickness: .2rem; /* Link underline weight */
+		--tooltip-underline-style: dashed; /* Link underline style */
+		--tooltip-underline-color: var(--primary); /* Link underline color */
+		--tooltip-link-color: inherit; /* Link text color */
+		--tooltip-link-weight: 500;
+		--tooltip-link-bg: inherit;
+		--tooltip-text-align: center;
+
+	/*
+	SHADING VARIABLES
+	If you want to adjust the generated shade variants, you can adjust the percentages here.
+	Higher percentages are lighter and lower are darker.
+	*/
+
+		--primary-hover-val: 1.15;
+		--primary-ultra-light-val: 95%;
+		--primary-light-val: 85%;
+		--primary-medium-val: 50%;
+		--primary-dark-val: 25%;
+		--primary-ultra-dark-val: 10%;
+
+		--secondary-hover-val: 1.15;
+		--secondary-ultra-light-val: 95%;
+		--secondary-light-val: 85%;
+		--secondary-medium-val: 50%;
+		--secondary-dark-val: 25%;
+		--secondary-ultra-dark-val: 10%;
+
+		--accent-hover-val: 1.15;
+		--accent-ultra-light-val: 95%;
+		--accent-light-val: 85%;
+		--accent-medium-val: 50%;
+		--accent-dark-val: 25%;
+		--accent-ultra-dark-val: 10%;
+
+		--base-hover-val: 1.15;
+		--base-ultra-light-val: 95%;
+		--base-light-val: 85%;
+		--base-medium-val: 50%;
+		--base-dark-val: 25%;
+		--base-ultra-dark-val: 10%;
+
+		--shade-hover-val: 1.15;
+		--shade-ultra-light-val: 95%;
+		--shade-light-val: 85%;
+		--shade-medium-val: 50%;
+		--shade-dark-val: 25%;
+		--shade-ultra-dark-val: 10%;
+
+	/*
+	PURE FALLBACKS
+	These are a backup fallback layer.
+	Values only apply to devices that don't support clamp() or calc().
+	Values are static and non-responsive.
+	The only goal here is to prevent complete breakage on outdated devices.
+	*/
+
+		--text-xs-pure: 1.3rem;
+		--text-s-pure: 1.4rem;
+		--text-m-pure: 1.8rem;
+		--text-l-pure: 2rem;
+		--text-xl-pure: 2.3rem;
+		--text-xxl-pure: 2.6rem;
+
+		--space-xs-pure: 1.9rem;
+		--space-s-pure: 2.1rem;
+		--space-m-pure: 2.4rem;
+		--space-l-pure: 2.7rem;
+		--space-xl-pure: 3rem;
+		--space-xxl-pure: 3.4rem;
+
+		--section-space-xs-pure: 3.8rem;
+		--section-space-s-pure: 4.8rem;
+		--section-space-m-pure: 6rem;
+		--section-space-l-pure: 7.5rem;
+		--section-space-xl-pure: 9.4rem;
+		--section-space-xxl-pure: 11.7rem;
+
+	/*** END SETUP ***/
+}
+
+/* Global Colors */
+
+:root {
+
+    /* Global colors 2 */
+    --primary: hsl(var(--primary-h), var(--primary-s), var(--primary-l));
+    --primary-hover: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) * var(--primary-hover-val)));
+    --primary-ultra-light: hsl(var(--primary-h), var(--primary-s), var(--primary-ultra-light-val));
+    --primary-light: hsl(var(--primary-h), var(--primary-s), var(--primary-light-val));
+    --primary-medium: hsl(var(--primary-h), var(--primary-s), var(--primary-medium-val));
+    --primary-dark: hsl(var(--primary-h), var(--primary-s), var(--primary-dark-val));
+    --primary-ultra-dark: hsl(var(--primary-h), var(--primary-s), var(--primary-ultra-dark-val));
+    --primary-ultra-dark-trans-90: hsla(var(--primary-h), var(--primary-s), var(--primary-ultra-dark-val), .9);
+    --primary-ultra-dark-trans-80: hsla(var(--primary-h), var(--primary-s), var(--primary-ultra-dark-val), .8);
+    --primary-ultra-dark-trans-60: hsla(var(--primary-h), var(--primary-s), var(--primary-ultra-dark-val), .6);
+    --primary-ultra-dark-trans-40: hsla(var(--primary-h), var(--primary-s), var(--primary-ultra-dark-val), .4);
+    --primary-ultra-dark-trans-20: hsla(var(--primary-h), var(--primary-s), var(--primary-ultra-dark-val), .2);
+    --primary-ultra-dark-trans-10: hsla(var(--primary-h), var(--primary-s), var(--primary-ultra-dark-val), .1);
+    --primary-trans-90: hsla(var(--primary-h), var(--primary-s), var(--primary-l), .9);
+    --primary-trans-80: hsla(var(--primary-h), var(--primary-s), var(--primary-l), .8);
+    --primary-trans-60: hsla(var(--primary-h), var(--primary-s), var(--primary-l), .6);
+    --primary-trans-40: hsla(var(--primary-h), var(--primary-s), var(--primary-l), .4);
+    --primary-trans-20: hsla(var(--primary-h), var(--primary-s), var(--primary-l), .2);
+    --primary-trans-10: hsla(var(--primary-h), var(--primary-s), var(--primary-l), .1);
+    --primary-comp: hsl(calc(var(--primary-h) + 180), var(--primary-s), var(--primary-l));
+    --secondary: hsl(var(--secondary-h), var(--secondary-s), var(--secondary-l));
+    --secondary-hover: hsl(var(--secondary-h), var(--secondary-s), calc(var(--secondary-l) * var(--secondary-hover-val)));
+    --secondary-ultra-light: hsl(var(--secondary-h), var(--secondary-s), var(--secondary-ultra-light-val));
+    --secondary-light: hsl(var(--secondary-h), var(--secondary-s), var(--secondary-light-val));
+    --secondary-medium: hsl(var(--secondary-h), var(--secondary-s), var(--secondary-medium-val));
+    --secondary-dark: hsl(var(--secondary-h), var(--secondary-s), var(--secondary-dark-val));
+    --secondary-ultra-dark: hsl(var(--secondary-h), var(--secondary-s), var(--secondary-ultra-dark-val));
+    --secondary-ultra-dark-trans-90: hsla(var(--secondary-h), var(--secondary-s), var(--secondary-ultra-dark-val), .9);
+    --secondary-ultra-dark-trans-80: hsla(var(--secondary-h), var(--secondary-s), var(--secondary-ultra-dark-val), .8);
+    --secondary-ultra-dark-trans-60: hsla(var(--secondary-h), var(--secondary-s), var(--secondary-ultra-dark-val), .6);
+    --secondary-ultra-dark-trans-40: hsla(var(--secondary-h), var(--secondary-s), var(--secondary-ultra-dark-val), .4);
+    --secondary-ultra-dark-trans-20: hsla(var(--secondary-h), var(--secondary-s), var(--secondary-ultra-dark-val), .2);
+    --secondary-ultra-dark-trans-10: hsla(var(--secondary-h), var(--secondary-s), var(--secondary-ultra-dark-val), .1);
+    --secondary-trans-90: hsla(var(--secondary-h), var(--secondary-s), var(--secondary-l), .9);
+    --secondary-trans-80: hsla(var(--secondary-h), var(--secondary-s), var(--secondary-l), .8);
+    --secondary-trans-60: hsla(var(--secondary-h), var(--secondary-s), var(--secondary-l), .6);
+    --secondary-trans-40: hsla(var(--secondary-h), var(--secondary-s), var(--secondary-l), .4);
+    --secondary-trans-20: hsla(var(--secondary-h), var(--secondary-s), var(--secondary-l), .2);
+    --secondary-trans-10: hsla(var(--secondary-h), var(--secondary-s), var(--secondary-l), .1);
+    --secondary-comp: hsl(calc(var(--secondary-h) + 180), var(--secondary-s), var(--secondary-l));
+    --accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+    --accent-hover: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) * var(--accent-hover-val)));
+    --accent-ultra-light: hsl(var(--accent-h), var(--accent-s), var(--accent-ultra-light-val));
+    --accent-light: hsl(var(--accent-h), var(--accent-s), var(--accent-light-val));
+    --accent-medium: hsl(var(--accent-h), var(--accent-s), var(--accent-medium-val));
+    --accent-dark: hsl(var(--accent-h), var(--accent-s), var(--accent-dark-val));
+    --accent-ultra-dark: hsl(var(--accent-h), var(--accent-s), var(--accent-ultra-dark-val));
+    --accent-ultra-dark-trans-90: hsla(var(--accent-h), var(--accent-s), var(--accent-ultra-dark-val), .9);
+    --accent-ultra-dark-trans-80: hsla(var(--accent-h), var(--accent-s), var(--accent-ultra-dark-val), .8);
+    --accent-ultra-dark-trans-60: hsla(var(--accent-h), var(--accent-s), var(--accent-ultra-dark-val), .6);
+    --accent-ultra-dark-trans-40: hsla(var(--accent-h), var(--accent-s), var(--accent-ultra-dark-val), .4);
+    --accent-ultra-dark-trans-20: hsla(var(--accent-h), var(--accent-s), var(--accent-ultra-dark-val), .2);
+    --accent-ultra-dark-trans-10: hsla(var(--accent-h), var(--accent-s), var(--accent-ultra-dark-val), .1);
+    --accent-trans-90: hsla(var(--accent-h), var(--accent-s), var(--accent-l), .9);
+    --accent-trans-80: hsla(var(--accent-h), var(--accent-s), var(--accent-l), .8);
+    --accent-trans-60: hsla(var(--accent-h), var(--accent-s), var(--accent-l), .6);
+    --accent-trans-40: hsla(var(--accent-h), var(--accent-s), var(--accent-l), .4);
+    --accent-trans-20: hsla(var(--accent-h), var(--accent-s), var(--accent-l), .2);
+    --accent-trans-10: hsla(var(--accent-h), var(--accent-s), var(--accent-l), .1);
+    --accent-comp: hsl(calc(var(--accent-h) + 180), var(--accent-s), var(--accent-l));
+    --base: hsl(var(--base-h), var(--base-s), var(--base-l));
+    --base-hover: hsl(var(--base-h), var(--base-s), calc(var(--base-l) * var(--base-hover-val)));
+    --base-ultra-light: hsl(var(--base-h), var(--base-s), var(--base-ultra-light-val));
+    --base-light: hsl(var(--base-h), var(--base-s), var(--base-light-val));
+    --base-medium: hsl(var(--base-h), var(--base-s), var(--base-medium-val));
+    --base-dark: hsl(var(--base-h), var(--base-s), var(--base-dark-val));
+    --base-ultra-dark: hsl(var(--base-h), var(--base-s), var(--base-ultra-dark-val));
+    --base-ultra-dark-trans-90: hsla(var(--base-h), var(--base-s), var(--base-ultra-dark-val), .9);
+    --base-ultra-dark-trans-80: hsla(var(--base-h), var(--base-s), var(--base-ultra-dark-val), .8);
+    --base-ultra-dark-trans-60: hsla(var(--base-h), var(--base-s), var(--base-ultra-dark-val), .6);
+    --base-ultra-dark-trans-40: hsla(var(--base-h), var(--base-s), var(--base-ultra-dark-val), .4);
+    --base-ultra-dark-trans-20: hsla(var(--base-h), var(--base-s), var(--base-ultra-dark-val), .2);
+    --base-ultra-dark-trans-10: hsla(var(--base-h), var(--base-s), var(--base-ultra-dark-val), .1);
+    --base-trans-90: hsla(var(--base-h), var(--base-s), var(--base-l), .9);
+    --base-trans-80: hsla(var(--base-h), var(--base-s), var(--base-l), .8);
+    --base-trans-60: hsla(var(--base-h), var(--base-s), var(--base-l), .6);
+    --base-trans-40: hsla(var(--base-h), var(--base-s), var(--base-l), .4);
+    --base-trans-20: hsla(var(--base-h), var(--base-s), var(--base-l), .2);
+    --base-trans-10: hsla(var(--base-h), var(--base-s), var(--base-l), .1);
+    --base-comp: hsl(calc(var(--base-h) + 180), var(--base-s), var(--base-l));
+    --shade-black: hsl(0, 0%, 0%);
+    --shade-white: hsl(100, 100%, 100%);
+    --shade-ultra-light: hsl(var(--shade-h), var(--shade-s), var(--shade-ultra-light-val));
+    --shade-light: hsl(var(--shade-h), var(--shade-s), var(--shade-light-val));
+    --shade-medium: hsl(var(--shade-h), var(--shade-s), var(--shade-medium-val));
+    --shade-dark: hsl(var(--shade-h), var(--shade-s), var(--shade-dark-val));
+    --shade-ultra-dark: hsl(var(--shade-h), var(--shade-s), var(--shade-ultra-dark-val));
+    --shade-ultra-dark-trans-90: hsla(var(--shade-h), var(--shade-s), var(--shade-ultra-dark-val), .9);
+    --shade-ultra-dark-trans-80: hsla(var(--shade-h), var(--shade-s), var(--shade-ultra-dark-val), .8);
+    --shade-ultra-dark-trans-60: hsla(var(--shade-h), var(--shade-s), var(--shade-ultra-dark-val), .6);
+    --shade-ultra-dark-trans-40: hsla(var(--shade-h), var(--shade-s), var(--shade-ultra-dark-val), .4);
+    --shade-ultra-dark-trans-20: hsla(var(--shade-h), var(--shade-s), var(--shade-ultra-dark-val), .2);
+    --shade-ultra-dark-trans-10: hsla(var(--shade-h), var(--shade-s), var(--shade-ultra-dark-val), .1);
+    --black-trans-90: hsla(var(--shade-h), var(--shade-s), var(--shade-l), .9);
+    --black-trans-80: hsla(var(--shade-h), var(--shade-s), var(--shade-l), .8);
+    --black-trans-60: hsla(var(--shade-h), var(--shade-s), var(--shade-l), .6);
+    --black-trans-40: hsla(var(--shade-h), var(--shade-s), var(--shade-l), .4);
+    --black-trans-20: hsla(var(--shade-h), var(--shade-s), var(--shade-l), .2);
+    --black-trans-10: hsla(var(--shade-h), var(--shade-s), var(--shade-l), .1);
+}
+
+/* Global spacing variables */
+
+:root {
+    --xs-space-fallback: 1vmin;
+    --xs-space: clamp(4px, 1vmin, 10px);
+    --s-space-fallback: 2vmin;
+    --s-space: clamp(8px, 2vmin, 20px);
+    --m-space-fallback: 3.5vmin;
+    --m-space: clamp(12px, 3.5vmin, 30px);
+    --l-space-fallback: 5vmin;
+    --l-space: clamp(20px, 5vmin, 50px);
+    --xl-space-fallback: 7vmin;
+    --xl-space: clamp(32px, 7vmin, 80px);
+    --xxl-space-fallback: 12vmin;
+    --xxl-space: clamp(52px, 12vmin, 130px);
+}
+
+/* Global type size variables */
+
+html {
+    font-size: var(--root-font-size);
+}
+
+:root {
+    --h1-fallback: 2.8rem;
+    --h1: clamp(2.03rem, 1.61rem - -2.07vw, 3.42rem);
+    --h2-fallback: 2.3rem;
+    --h2: clamp(1.80rem, 1.49rem - -1.56vw, 2.85rem);
+    --h3-fallback: 2rem;
+    --h3: clamp(1.60rem, 1.37rem - -1.15vw, 2.38rem);
+    --h4-fallback: 1.6rem;
+    --h4: clamp(1.42rem, 1.26rem - -0.82vw, 1.98rem);
+    --h5-fallback: 1.35rem;
+    --h5: clamp(1.27rem, 1.15rem - -0.57vw, 1.65rem);
+    --h6-fallback: 1.2rem;
+    --h6: clamp(1.13rem, 1.05rem - -0.37vw, 1.38rem);
+    --s-text-fallback: 0.85rem;
+    --s-text: 0.85rem;
+    --m-text-fallback: 1rem;
+    --m-text: 1rem;
+    --l-text-fallback: 1rem;
+    --l-text: clamp(1rem, 0.82rem - -0.40vw, 1.2rem);
+    --xl-text-fallback: 1.2rem;
+    --xl-text: clamp(1.1rem, 0.98rem - -0.48vw, 1.40rem);
+}
+
+/* Global Typography Settings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Source Sans Pro';
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+body .c-h1 {
+    font-size: var(--h1);
+}
+
+body .c-h1 {
+    font-size: var(--h1-fallback);
+}
+
+body .c-h2 {
+    font-size: var(--h2);
+}
+
+body .c-h2 {
+    font-size: var(--h2-fallback);
+}
+
+body .c-h3 {
+    font-size: var(--h3);
+}
+
+body .c-h3 {
+    font-size: var(--h3-fallback);
+}
+
+body .c-h4 {
+    font-size: var(--h4);
+}
+
+body .c-h4 {
+    font-size: var(--h4-fallback);
+}
+
+body .c-h5 {
+    font-size: var(--h5);
+}
+
+body .c-h5 {
+    font-size: var(--h5-fallback);
+}
+
+body .c-h6 {
+    font-size: var(--h6);
+}
+
+body .c-h6 {
+    font-size: var(--h6-fallback);
+}
+
+body .c-text-xl {
+    font-size: var(--xl-text);
+}
+
+body .c-text-xl {
+    font-size: var(--xl-text-fallback);
+}
+
+body .c-text-l {
+    font-size: var(--l-text);
+}
+
+body .c-text-l {
+    font-size: var(--l-text-fallback);
+}
+
+body .c-text-m {
+    font-size: var(--m-text);
+}
+
+body .c-text-m {
+    font-size: var(--m-text-fallback);
+}
+
+body .c-text-s {
+    font-size: var(--s-text);
+}
+
+body .c-text-s {
+    font-size: var(--s-text-fallback);
+}
+
+
+
+/* Typography Size and Capitalization Utility classes */
+
+
+.c-h1 {
+    text-transform: capitalize;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.c-h2 {
+    font-weight: 600;
+    line-height: 1.3;
+    text-transform: capitalize;
+}
+
+.c-h3 {
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.c-h4 {
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.c-h5 {
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.c-h6 {
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+.c-text-xl {
+    font-weight: 500;
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+.c-text-l {
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.c-text-m {
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.c-text-s {
+    font-weight: 300;
+}
+
+/* Typograhy Color Utility Classes */
+
+.c-heading-dark {
+    color: #0f0f0f;
+}
+
+/* Typography Decor Utility Classes */
+
+.c-underline {
+    text-decoration: underline;
+}
+
+.c-lowercase {
+    text-transform: lowercase;
+}
+
+.c-uppercase {
+    text-transform: uppercase;
+}
+
+.c-bold {
+    font-weight: 600;
+}
+
+.c-italic {
+    font-style: italic;
+}
+
+
+/* Card Utility Classes */
+
+.c-card-light {
+    background-color: var(--shade-white);
+    width: 100%;
+    position: relative;
+    box-shadow-color: rgba(0, 0, 0, 0.08);
+    box-shadow-horizontal-offset: 0;
+    box-shadow-vertical-offset: 5;
+    box-shadow-blur: 15;
+    border-radius: 7px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.c-card-dark {
+    width: 100%;
+    border-radius: 7px;
+    background-color: #191919;
+    box-shadow-color: rgba(0, 0, 0, 0.08);
+    box-shadow-horizontal-offset: 0;
+    box-shadow-vertical-offset: 5;
+    box-shadow-blur: 15;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.c-card-accent {
+    background-color: #4353ff;
+    border-radius: 7px;
+    width: 100%;
+    box-shadow-horizontal-offset: 0;
+    box-shadow-vertical-offset: 5;
+    box-shadow-blur: 15;
+    box-shadow-color: rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Owl Spacing*/
+
+.owl--xs>*+* {
+    margin-top: var(--xs-space);
+}
+
+.owl--s>*+* {
+    margin-top: var(--s-space);
+}
+
+.owl-spacing--m>*+* {
+    margin-top: var(--m-space);
+}
+
+.owl-spacing--l>*+* {
+    margin-top: var(--l-space);
+}
+
+.owl-spacing--xl>*+* {
+    margin-top: var(--xl-space);
+}
+
+
+/* Max width utility classes */
+
+.c-max-width-320 {
+    max-width: 320px;
+}
+
+.c-max-width-480 {
+    max-width: 480px;
+}
+
+.c-max-width-640 {
+    max-width: 640px;
+}
+
+.c-max-width-960 {
+    max-width: 960px;
+}
+
+.c-max-width-1120 {
+    max-width: 1120px;
+}
+
+/* Effects */
+
+.c-transition {
+    transition-duration: 0.5s;
+}
+
+/* Buttons */
+
+.btn--white {
+    --btn-bg: var(--btn-white-bg);
+    --btn-text-color: var(--btn-white-text);
+    --btn-hover: var(--btn-white-hover);
+    --btn-hover-text: var(--btn-white-hover-text);
+    --btn-border-color: var(--btn-white-border-color);
+    --btn-outline-text: var(--white-outline-btn-text);
+    --btn-outline-hover-text: var(--white-outline-hover-text);
+}
+
+.btn--black {
+    --btn-bg: var(--btn-black-bg);
+    --btn-text-color: var(--btn-black-text);
+    --btn-hover: var(--btn-black-hover);
+    --btn-hover-text: var(--btn-black-hover-text);
+    --btn-border-color: var(--btn-black-border-color);
+    --btn-outline-text: var(--black-outline-btn-text);
+    --btn-outline-hover-text: var(--black-outline-hover-text);
+}
+
+.btn--base {
+    --btn-bg: var(--btn-base-bg);
+    --btn-text-color: var(--btn-base-text);
+    --btn-hover: var(--btn-base-hover);
+    --btn-hover-text: var(--btn-base-hover-text);
+    --btn-border-color: var(--btn-base-border-color);
+    --btn-outline-text: var(--base-outline-btn-text);
+    --btn-outline-hover-text: var(--base-outline-hover-text);
+}
+
+.btn--accent {
+    --btn-bg: var(--btn-accent-bg);
+    --btn-text-color: var(--btn-accent-text);
+    --btn-hover: var(--btn-accent-hover);
+    --btn-hover-text: var(--btn-accent-hover-text);
+    --btn-border-color: var(--btn-accent-border-color);
+    --btn-outline-text: var(--accent-outline-btn-text);
+    --btn-outline-hover-text: var(--accent-outline-hover-text);
+}
+
+.btn--secondary {
+    --btn-bg: var(--btn-secondary-bg);
+    --btn-text-color: var(--btn-secondary-text);
+    --btn-hover: var(--btn-secondary-hover);
+    --btn-hover-text: var(--btn-secondary-hover-text);
+    --btn-border-color: var(--btn-secondary-border-color);
+    --btn-outline-text: var(--secondary-outline-btn-text);
+    --btn-outline-hover-text: var(--secondary-outline-hover-text);
+}
+
+
+.btn--primary {
+    --btn-bg: var(--btn-primary-bg);
+    --btn-text-color: var(--btn-primary-text);
+    --btn-hover: var(--btn-primary-hover);
+    --btn-hover-text: var(--btn-primary-hover-text);
+    --btn-border-color: var(--btn-primary-border-color);
+    --btn-outline-text: var(--primary-outline-btn-text);
+    --btn-outline-hover-text: var(--primary-outline-hover-text);
+}
+
+.c-btn-xs {
+    font-size: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.btn--s {
+    --btn-text-size: var(--text-s);
+}
+
+.btn--m {
+    --btn-text-size: var(--text-m);
+}
+
+.btn--l {
+    --btn-text-size: var(--text-l);
+}
+
+.btn--xl {
+    --btn-text-size: var(--text-xl);
+}
+
+.btn--xxl {
+    --btn-text-size: var(--text-xxl);
+}
+
+:is(.btn--xs, .btn--s, .btn--m, .btn--l, .btn--xl, .btn--xxl) {
+    font-size: var(--btn-text-size);
+}
+
+:is(.btn--xs, .btn--s, .btn--m, .btn--l, .btn--xl, .btn--xxl, .btn--primary, .btn--secondary, .btn--accent, .btn--base, .btn--white, .btn--black) {
+    background: var(--btn-bg, var(--btn-primary-bg));
+    border-width: var(--btn-border-size);
+    border-color: var(--btn-border-color, var(--btn-primary-border-color));
+    border-radius: var(--btn-radius);
+    line-height: 1.2;
+    padding: var(--btn-pad-y) var(--btn-pad-x);
+    font-size: var(--btn-text-size, var(--text-m));
+    color: var(--btn-text-color, var(--btn-primary-text));
+}
+
+:is(.btn--xs, .btn--s, .btn--m, .btn--l, .btn--xl, .btn--xxl, .btn--primary, .btn--secondary, .btn--accent, .btn--base, .btn--white, .btn--black):hover {
+    background: var(--btn-hover, var(--btn-primary-hover));
+    border-color: var(--btn-hover, var(--btn-primary-hover-border-color));
+    color: var(--btn-hover-text, var(--btn-primary-hover-text));
+}
+
+
+/* Padding Utility classes */
+
+.pad-section--none  {
+  padding: 0 var(--space-m);
+}
+.pad-section--xxl  {
+  padding: var(--section-xxl);
+}
+.pad-section--xl  {
+  padding: var(--section-xl);
+}
+.pad-section--l  {
+  padding: var(--section-l);
+}
+.pad-section--s  {
+  padding: var(--section-s);
+}
+.pad-section--xs  {
+  padding: var(--section-xs);
+}
