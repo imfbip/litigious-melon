@@ -1,0 +1,1799 @@
+<link href="https://fonts.googleapis.com/css?family=Montserrat:600,800|Source+Serif+Pro:400,700," rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,700,700i|Tenor+Sans" rel="stylesheet">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* START Framework, spacing, text size, colors, grid breaking */
+
+:root {
+    --space-xs: var(--space-xs-clamp);
+    --space-s: var(--space-s-clamp);
+    --space-m: var(--space-m-clamp);
+    --space-l: var(--space-l-clamp);
+    --space-xl: var(--space-xl-clamp);
+    --space-xxl: var(--space-xxl-clamp);
+    --section-space-xs: var(--section-space-xs-clamp);
+    --section-space-s: var(--section-space-s-clamp);
+    --section-space-m: var(--section-space-m-clamp);
+    --section-space-l: var(--section-space-l-clamp);
+    --section-space-xl: var(--section-space-xl-clamp);
+    --section-space-xxl: var(--section-space-xxl-clamp);
+}
+
+:root {
+    --space-xs: var(--space-xs-calc);
+    --space-s: var(--space-s-calc);
+    --space-m: var(--space-m-calc);
+    --space-l: var(--space-l-calc);
+    --space-xl: var(--space-xl-calc);
+    --space-xxl: var(--space-xxl-calc);
+    --section-space-xs: var(--section-space-xs-calc);
+    --section-space-s: var(--section-space-s-calc);
+    --section-space-m: var(--section-space-m-calc);
+    --section-space-l: var(--section-space-l-calc);
+    --section-space-xl: var(--section-space-xl-calc);
+    --section-space-xxl: var(--section-space-xxl-calc);
+}
+
+:root {
+    --text-xs: var(--text-xs-clamp);
+    --text-s: var(--text-s-clamp);
+    --text-m: var(--text-m-clamp);
+    --text-l: var(--text-l-clamp);
+    --text-xl: var(--text-xl-clamp);
+    --text-xxl: var(--text-xxl-clamp);
+}
+
+:root {
+    --text-xs: var(--text-xs-calc);
+    --text-s: var(--text-s-calc);
+    --text-m: var(--text-m-calc);
+    --text-l: var(--text-l-calc);
+    --text-xl: var(--text-xl-calc);
+    --text-xxl: var(--text-xxl-calc);
+}
+
+:root {
+    --xs-space-fallback: 1vmin;
+    --xs-space: clamp(4px, 1vmin, 10px);
+    --s-space-fallback: 2vmin;
+    --s-space: clamp(8px, 2vmin, 20px);
+    --m-space-fallback: 3.5vmin;
+    --m-space: clamp(12px, 3.5vmin, 30px);
+    --l-space-fallback: 5vmin;
+    --l-space: clamp(20px, 5vmin, 50px);
+    --xl-space-fallback: 7vmin;
+    --xl-space: clamp(32px, 7vmin, 80px);
+    --xxl-space-fallback: 12vmin;
+    --xxl-space: clamp(52px, 12vmin, 130px);
+}
+
+:root {
+    --h1-fallback: 2.8rem;
+    --h1: clamp(2.03rem, 1.61rem - -2.07vw, 3.42rem);
+    --h2-fallback: 2.3rem;
+    --h2: clamp(1.80rem, 1.49rem - -1.56vw, 2.85rem);
+    --h3-fallback: 2rem;
+    --h3: clamp(1.60rem, 1.37rem - -1.15vw, 2.38rem);
+    --h4-fallback: 1.6rem;
+    --h4: clamp(1.42rem, 1.26rem - -0.82vw, 1.98rem);
+    --h5-fallback: 1.35rem;
+    --h5: clamp(1.27rem, 1.15rem - -0.57vw, 1.65rem);
+    --h6-fallback: 1.2rem;
+    --h6: clamp(1.13rem, 1.05rem - -0.37vw, 1.38rem);
+    --s-text-fallback: 0.85rem;
+    --s-text: 0.85rem;
+    --m-text-fallback: 1rem;
+    --m-text: 1rem;
+    --l-text-fallback: 1rem;
+    --l-text: clamp(1rem, 0.82rem - -0.40vw, 1.2rem);
+    --xl-text-fallback: 1.2rem;
+    --xl-text: clamp(1.1rem, 0.98rem - -0.48vw, 1.40rem);
+}
+
+:root {
+    --root-font-size: 62.5%;
+    --vp-min: 32;
+    --vp-max: 128;
+    --primary-h: 4;
+    --primary-s: 72%;
+    --primary-l: 45%;
+    --secondary-h: 22;
+    --secondary-s: 13%;
+    --secondary-l: 60%;
+    --accent-h: 34;
+    --accent-s: 21%;
+    --accent-l: 50%;
+    --base-h: 252;
+    --base-s: 10%;
+    --base-l: 10%;
+    --shade-h: 0;
+    --shade-s: 29%;
+    --shade-l: 10.980392156863%;
+    --base-text-desk: 1.8;
+    --base-text-mob: 1.6;
+    --text-xs-stop: 1rem;
+    --text-s-stop: 1.1rem;
+    --text-scale: 1.414;
+    --mob-text-scale: 1.2;
+    --text-multiplier: 1.5;
+    --base-space: 3;
+    --base-space-min: 2.4;
+    --space-scale: 1.5;
+    --mob-space-scale: 1.3;
+    --space-adjust-section: 4;
+    --mob-space-adjust-section: 3;
+    --section-padding-x: var(--space-m);
+    --btn-primary-bg: var(--primary);
+    --btn-secondary-bg: var(--secondary);
+    --btn-accent-bg: var(--accent);
+    --btn-base-bg: var(--base);
+    --btn-white-bg: var(--shade-white);
+    --btn-black-bg: var(--shade-black);
+    --btn-primary-text: var(--primary-ultra-light);
+    --btn-secondary-text: var(--secondary-ultra-light);
+    --btn-accent-text: var(--accent-ultra-light);
+    --btn-base-text: var(--base-ultra-light);
+    --btn-white-text: var(--shade-black);
+    --btn-black-text: var(--shade-white);
+    --btn-primary-border-color: var(--primary);
+    --btn-secondary-border-color: var(--secondary);
+    --btn-accent-border-color: var(--accent);
+    --btn-base-border-color: var(--base);
+    --btn-white-border-color: var(--shade-white);
+    --btn-black-border-color: var(--shade-black);
+    --btn-primary-hover: var(--primary-hover);
+    --btn-secondary-hover: var(--secondary-hover);
+    --btn-accent-hover: var(--accent-hover);
+    --btn-base-hover: var(--base-hover);
+    --btn-white-hover: var(--primary-hover);
+    --btn-black-hover: var(--primary-hover);
+    --btn-primary-hover-text: var(--primary-ultra-light);
+    --btn-secondary-hover-text: var(--secondary-ultra-light);
+    --btn-accent-hover-text: var(--accent-ultra-light);
+    --btn-base-hover-text: var(--base-ultra-light);
+    --btn-white-hover-text: var(--shade-white);
+    --btn-black-hover-text: var(--shade-white);
+    --btn-primary-hover-border-color: var(--primary-hover);
+    --btn-secondary-hover-border-color: var(--secondary-hover);
+    --btn-accent-hover-border-color: var(--accent-hover);
+    --btn-base-hover-border-color: var(--base-hover);
+    --btn-white-hover-border-color: var(--shade-black);
+    --btn-black-hover-border-color: var(--shade-white);
+    --btn-border-size: 0.25rem;
+    --btn-pad-y: 0.8em;
+    --btn-pad-x: 1.3em;
+    --btn-radius: 0;
+    --outline-btn-border-size: 0.25rem;
+    --primary-outline-btn-text: var(--primary);
+    --secondary-outline-btn-text: var(--secondary);
+    --base-outline-btn-text: var(--base);
+    --accent-outline-btn-text: var(--accent);
+    --white-outline-btn-text: var(--shade-white);
+    --black-outline-btn-text: var(--shade-black);
+    --primary-outline-hover-text: var(--primary-ultra-light);
+    --secondary-outline-hover-text: var(--secondary-ultra-light);
+    --base-outline-hover-text: var(--base-ultra-light);
+    --accent-outline-hover-text: var(--accent-ultra-light);
+    --white-outline-hover-text: var(--primary-ultra-light);
+    --black-outline-hover-text: var(--primary-ultra-light);
+    --base-radius: 1rem;
+    --radius-scale: 1.5;
+    --tooltip-bg: var(--base);
+    --tooltip-text-size: var(--text-s);
+    --tooltip-text-color: var(--shade-white);
+    --tooltip-width: 24rem;
+    --tooltip-underline-thickness: .2rem;
+    --tooltip-underline-style: dashed;
+    --tooltip-underline-color: var(--primary);
+    --tooltip-link-color: inherit;
+    --tooltip-link-weight: 500;
+    --tooltip-link-bg: inherit;
+    --tooltip-text-align: center;
+    --primary-hover-val: 1.15;
+    --primary-ultra-light-val: 95%;
+    --primary-light-val: 85%;
+    --primary-medium-val: 50%;
+    --primary-dark-val: 25%;
+    --primary-ultra-dark-val: 10%;
+    --secondary-hover-val: 1.15;
+    --secondary-ultra-light-val: 95%;
+    --secondary-light-val: 85%;
+    --secondary-medium-val: 50%;
+    --secondary-dark-val: 25%;
+    --secondary-ultra-dark-val: 10%;
+    --accent-hover-val: 1.15;
+    --accent-ultra-light-val: 95%;
+    --accent-light-val: 85%;
+    --accent-medium-val: 50%;
+    --accent-dark-val: 25%;
+    --accent-ultra-dark-val: 10%;
+    --base-hover-val: 1.15;
+    --base-ultra-light-val: 95%;
+    --base-light-val: 85%;
+    --base-medium-val: 50%;
+    --base-dark-val: 25%;
+    --base-ultra-dark-val: 10%;
+    --shade-hover-val: 1.15;
+    --shade-ultra-light-val: 95%;
+    --shade-light-val: 85%;
+    --shade-medium-val: 50%;
+    --shade-dark-val: 25%;
+    --shade-ultra-dark-val: 10%;
+    --text-xs-pure: 1.3rem;
+    --text-s-pure: 1.4rem;
+    --text-m-pure: 1.8rem;
+    --text-l-pure: 2rem;
+    --text-xl-pure: 2.3rem;
+    --text-xxl-pure: 2.6rem;
+    --space-xs-pure: 1.9rem;
+    --space-s-pure: 2.1rem;
+    --space-m-pure: 2.4rem;
+    --space-l-pure: 2.7rem;
+    --space-xl-pure: 3rem;
+    --space-xxl-pure: 3.4rem;
+    --section-space-xs-pure: 3.8rem;
+    --section-space-s-pure: 4.8rem;
+    --section-space-m-pure: 6rem;
+    --section-space-l-pure: 7.5rem;
+    --section-space-xl-pure: 9.4rem;
+    --section-space-xxl-pure: 11.7rem;
+}
+
+:root {
+    --primary: hsl(var(--primary-h), var(--primary-s), var(--primary-l));
+    --primary-hover: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) * var(--primary-hover-val)));
+    --primary-ultra-light: hsl(var(--primary-h), var(--primary-s), var(--primary-ultra-light-val));
+    --primary-light: hsl(var(--primary-h), var(--primary-s), var(--primary-light-val));
+    --primary-medium: hsl(var(--primary-h), var(--primary-s), var(--primary-medium-val));
+    --primary-dark: hsl(var(--primary-h), var(--primary-s), var(--primary-dark-val));
+    --primary-ultra-dark: hsl(var(--primary-h), var(--primary-s), var(--primary-ultra-dark-val));
+    --primary-ultra-dark-trans-90: hsla(var(--primary-h), var(--primary-s), var(--primary-ultra-dark-val), .9);
+    --primary-ultra-dark-trans-80: hsla(var(--primary-h), var(--primary-s), var(--primary-ultra-dark-val), .8);
+    --primary-ultra-dark-trans-60: hsla(var(--primary-h), var(--primary-s), var(--primary-ultra-dark-val), .6);
+    --primary-ultra-dark-trans-40: hsla(var(--primary-h), var(--primary-s), var(--primary-ultra-dark-val), .4);
+    --primary-ultra-dark-trans-20: hsla(var(--primary-h), var(--primary-s), var(--primary-ultra-dark-val), .2);
+    --primary-ultra-dark-trans-10: hsla(var(--primary-h), var(--primary-s), var(--primary-ultra-dark-val), .1);
+    --primary-trans-90: hsla(var(--primary-h), var(--primary-s), var(--primary-l), .9);
+    --primary-trans-80: hsla(var(--primary-h), var(--primary-s), var(--primary-l), .8);
+    --primary-trans-60: hsla(var(--primary-h), var(--primary-s), var(--primary-l), .6);
+    --primary-trans-40: hsla(var(--primary-h), var(--primary-s), var(--primary-l), .4);
+    --primary-trans-20: hsla(var(--primary-h), var(--primary-s), var(--primary-l), .2);
+    --primary-trans-10: hsla(var(--primary-h), var(--primary-s), var(--primary-l), .1);
+    --primary-comp: hsl(calc(var(--primary-h) + 180), var(--primary-s), var(--primary-l));
+    --secondary: hsl(var(--secondary-h), var(--secondary-s), var(--secondary-l));
+    --secondary-hover: hsl(var(--secondary-h), var(--secondary-s), calc(var(--secondary-l) * var(--secondary-hover-val)));
+    --secondary-ultra-light: hsl(var(--secondary-h), var(--secondary-s), var(--secondary-ultra-light-val));
+    --secondary-light: hsl(var(--secondary-h), var(--secondary-s), var(--secondary-light-val));
+    --secondary-medium: hsl(var(--secondary-h), var(--secondary-s), var(--secondary-medium-val));
+    --secondary-dark: hsl(var(--secondary-h), var(--secondary-s), var(--secondary-dark-val));
+    --secondary-ultra-dark: hsl(var(--secondary-h), var(--secondary-s), var(--secondary-ultra-dark-val));
+    --secondary-ultra-dark-trans-90: hsla(var(--secondary-h), var(--secondary-s), var(--secondary-ultra-dark-val), .9);
+    --secondary-ultra-dark-trans-80: hsla(var(--secondary-h), var(--secondary-s), var(--secondary-ultra-dark-val), .8);
+    --secondary-ultra-dark-trans-60: hsla(var(--secondary-h), var(--secondary-s), var(--secondary-ultra-dark-val), .6);
+    --secondary-ultra-dark-trans-40: hsla(var(--secondary-h), var(--secondary-s), var(--secondary-ultra-dark-val), .4);
+    --secondary-ultra-dark-trans-20: hsla(var(--secondary-h), var(--secondary-s), var(--secondary-ultra-dark-val), .2);
+    --secondary-ultra-dark-trans-10: hsla(var(--secondary-h), var(--secondary-s), var(--secondary-ultra-dark-val), .1);
+    --secondary-trans-90: hsla(var(--secondary-h), var(--secondary-s), var(--secondary-l), .9);
+    --secondary-trans-80: hsla(var(--secondary-h), var(--secondary-s), var(--secondary-l), .8);
+    --secondary-trans-60: hsla(var(--secondary-h), var(--secondary-s), var(--secondary-l), .6);
+    --secondary-trans-40: hsla(var(--secondary-h), var(--secondary-s), var(--secondary-l), .4);
+    --secondary-trans-20: hsla(var(--secondary-h), var(--secondary-s), var(--secondary-l), .2);
+    --secondary-trans-10: hsla(var(--secondary-h), var(--secondary-s), var(--secondary-l), .1);
+    --secondary-comp: hsl(calc(var(--secondary-h) + 180), var(--secondary-s), var(--secondary-l));
+    --accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+    --accent-hover: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) * var(--accent-hover-val)));
+    --accent-ultra-light: hsl(var(--accent-h), var(--accent-s), var(--accent-ultra-light-val));
+    --accent-light: hsl(var(--accent-h), var(--accent-s), var(--accent-light-val));
+    --accent-medium: hsl(var(--accent-h), var(--accent-s), var(--accent-medium-val));
+    --accent-dark: hsl(var(--accent-h), var(--accent-s), var(--accent-dark-val));
+    --accent-ultra-dark: hsl(var(--accent-h), var(--accent-s), var(--accent-ultra-dark-val));
+    --accent-ultra-dark-trans-90: hsla(var(--accent-h), var(--accent-s), var(--accent-ultra-dark-val), .9);
+    --accent-ultra-dark-trans-80: hsla(var(--accent-h), var(--accent-s), var(--accent-ultra-dark-val), .8);
+    --accent-ultra-dark-trans-60: hsla(var(--accent-h), var(--accent-s), var(--accent-ultra-dark-val), .6);
+    --accent-ultra-dark-trans-40: hsla(var(--accent-h), var(--accent-s), var(--accent-ultra-dark-val), .4);
+    --accent-ultra-dark-trans-20: hsla(var(--accent-h), var(--accent-s), var(--accent-ultra-dark-val), .2);
+    --accent-ultra-dark-trans-10: hsla(var(--accent-h), var(--accent-s), var(--accent-ultra-dark-val), .1);
+    --accent-trans-90: hsla(var(--accent-h), var(--accent-s), var(--accent-l), .9);
+    --accent-trans-80: hsla(var(--accent-h), var(--accent-s), var(--accent-l), .8);
+    --accent-trans-60: hsla(var(--accent-h), var(--accent-s), var(--accent-l), .6);
+    --accent-trans-40: hsla(var(--accent-h), var(--accent-s), var(--accent-l), .4);
+    --accent-trans-20: hsla(var(--accent-h), var(--accent-s), var(--accent-l), .2);
+    --accent-trans-10: hsla(var(--accent-h), var(--accent-s), var(--accent-l), .1);
+    --accent-comp: hsl(calc(var(--accent-h) + 180), var(--accent-s), var(--accent-l));
+    --base: hsl(var(--base-h), var(--base-s), var(--base-l));
+    --base-hover: hsl(var(--base-h), var(--base-s), calc(var(--base-l) * var(--base-hover-val)));
+    --base-ultra-light: hsl(var(--base-h), var(--base-s), var(--base-ultra-light-val));
+    --base-light: hsl(var(--base-h), var(--base-s), var(--base-light-val));
+    --base-medium: hsl(var(--base-h), var(--base-s), var(--base-medium-val));
+    --base-dark: hsl(var(--base-h), var(--base-s), var(--base-dark-val));
+    --base-ultra-dark: hsl(var(--base-h), var(--base-s), var(--base-ultra-dark-val));
+    --base-ultra-dark-trans-90: hsla(var(--base-h), var(--base-s), var(--base-ultra-dark-val), .9);
+    --base-ultra-dark-trans-80: hsla(var(--base-h), var(--base-s), var(--base-ultra-dark-val), .8);
+    --base-ultra-dark-trans-60: hsla(var(--base-h), var(--base-s), var(--base-ultra-dark-val), .6);
+    --base-ultra-dark-trans-40: hsla(var(--base-h), var(--base-s), var(--base-ultra-dark-val), .4);
+    --base-ultra-dark-trans-20: hsla(var(--base-h), var(--base-s), var(--base-ultra-dark-val), .2);
+    --base-ultra-dark-trans-10: hsla(var(--base-h), var(--base-s), var(--base-ultra-dark-val), .1);
+    --base-trans-90: hsla(var(--base-h), var(--base-s), var(--base-l), .9);
+    --base-trans-80: hsla(var(--base-h), var(--base-s), var(--base-l), .8);
+    --base-trans-60: hsla(var(--base-h), var(--base-s), var(--base-l), .6);
+    --base-trans-40: hsla(var(--base-h), var(--base-s), var(--base-l), .4);
+    --base-trans-20: hsla(var(--base-h), var(--base-s), var(--base-l), .2);
+    --base-trans-10: hsla(var(--base-h), var(--base-s), var(--base-l), .1);
+    --base-comp: hsl(calc(var(--base-h) + 180), var(--base-s), var(--base-l));
+    --shade-black: hsl(0, 0%, 0%);
+    --shade-white: hsl(12, 29%, 93%);
+    --shade-ultra-light: hsl(var(--shade-h), var(--shade-s), 95%);
+    --shade-light: hsl(var(--shade-h), var(--shade-s), 85%);
+    --shade-medium: hsl(var(--shade-h), var(--shade-s), 50%);
+    --shade-dark: hsl(var(--shade-h), var(--shade-s), 20%);
+    --shade-ultra-dark: hsl(var(--shade-h), var(--shade-s), 10%);
+    --shade-ultra-dark-trans-90: hsla(var(--shade-h), var(--shade-s), var(--shade-ultra-dark-val), .9);
+    --shade-ultra-dark-trans-80: hsla(var(--shade-h), var(--shade-s), var(--shade-ultra-dark-val), .8);
+    --shade-ultra-dark-trans-60: hsla(var(--shade-h), var(--shade-s), var(--shade-ultra-dark-val), .6);
+    --shade-ultra-dark-trans-40: hsla(var(--shade-h), var(--shade-s), var(--shade-ultra-dark-val), .4);
+    --shade-ultra-dark-trans-20: hsla(var(--shade-h), var(--shade-s), var(--shade-ultra-dark-val), .2);
+    --shade-ultra-dark-trans-10: hsla(var(--shade-h), var(--shade-s), var(--shade-ultra-dark-val), .1);
+    --black-trans-90: hsla(var(--shade-h), var(--shade-s), var(--shade-l), .9);
+    --black-trans-80: hsla(var(--shade-h), var(--shade-s), var(--shade-l), .8);
+    --black-trans-60: hsla(var(--shade-h), var(--shade-s), var(--shade-l), .6);
+    --black-trans-40: hsla(var(--shade-h), var(--shade-s), var(--shade-l), .4);
+    --black-trans-20: hsla(var(--shade-h), var(--shade-s), var(--shade-l), .2);
+    --black-trans-10: hsla(var(--shade-h), var(--shade-s), var(--shade-l), .1);
+    --text-m-max: var(--base-text-desk);
+    --text-m-min: var(--base-text-mob);
+    --text-s-max: calc(var(--text-m-max) / var(--text-scale));
+    --text-s-min: calc(var(--text-m-min) / var(--mob-text-scale));
+    --text-xs-max: calc(var(--text-s-max) / var(--text-scale));
+    --text-xs-min: calc(var(--text-s-min) / var(--mob-text-scale));
+    --text-l-max: calc(var(--text-m-max) * var(--text-scale));
+    --text-l-min: calc(var(--text-m-min) * var(--mob-text-scale));
+    --text-xl-max: calc(var(--text-l-max) * var(--text-scale));
+    --text-xl-min: calc(var(--text-l-min) * var(--mob-text-scale));
+    --text-xxl-max: calc(var(--text-xl-max) * var(--text-scale));
+    --text-xxl-min: calc(var(--text-xl-min) * var(--mob-text-scale));
+    --text-xs: var(--text-xs-pure);
+    --text-s: var(--text-s-pure);
+    --text-m: var(--text-m-pure);
+    --text-l: var(--text-l-pure);
+    --text-xl: var(--text-xl-pure);
+    --text-xxl: var(--text-xxl-pure);
+    --text-xs-calc: calc(var(--text-xs-min) * 1rem + (var(--text-xs-max) - var(--text-xs-min)) * ((100vw - (var(--vp-min) * 1rem)) / (var(--vp-max) - var(--vp-min))));
+    --text-s-calc: calc(var(--text-s-min) * 1rem + (var(--text-s-max) - var(--text-s-min)) * ((100vw - (var(--vp-min) * 1rem)) / (var(--vp-max) - var(--vp-min))));
+    --text-m-calc: calc(var(--text-m-min) * 1rem + (var(--text-m-max) - var(--text-m-min)) * ((100vw - (var(--vp-min) * 1rem)) / (var(--vp-max) - var(--vp-min))));
+    --text-l-calc: calc(var(--text-l-min) * 1rem + (var(--text-l-max) - var(--text-l-min)) * ((100vw - (var(--vp-min) * 1rem)) / (var(--vp-max) - var(--vp-min))));
+    --text-xl-calc: calc(var(--text-xl-min) * 1rem + (var(--text-xl-max) - var(--text-xl-min)) * ((100vw - (var(--vp-min) * 1rem)) / (var(--vp-max) - var(--vp-min))));
+    --text-xxl-calc: calc(var(--text-xxl-min) * 1rem + (var(--text-xxl-max) - var(--text-xxl-min)) * ((100vw - (var(--vp-min) * 1rem)) / (var(--vp-max) - var(--vp-min))));
+    --text-xs-clamp: clamp(calc(var(--text-xs-min) * 1rem), calc(var(--text-xs-min) * 1rem + ((1vw - (var(--vp-min) / 100) * 1rem) * (100 * (var(--text-xs-max) - var(--text-xs-min)) / (var(--vp-max) - var(--vp-min))))), calc(var(--text-xs-max) * 1rem));
+    --text-s-clamp: clamp(calc(var(--text-s-min) * 1rem), calc(var(--text-s-min) * 1rem + ((1vw - (var(--vp-min) / 100) * 1rem) * (100 * (var(--text-s-max) - var(--text-s-min)) / (var(--vp-max) - var(--vp-min))))), calc(var(--text-s-max) * 1rem));
+    --text-m-clamp: clamp(calc(var(--text-m-min) * 1rem), calc(var(--text-m-min) * 1rem + ((1vw - (var(--vp-min) / 100) * 1rem) * (100 * (var(--text-m-max) - var(--text-m-min)) / (var(--vp-max) - var(--vp-min))))), calc(var(--text-m-max) * 1rem));
+    --text-l-clamp: clamp(calc(var(--text-l-min) * 1rem), calc(var(--text-l-min) * 1rem + ((1vw - (var(--vp-min) / 100) * 1rem) * (100 * (var(--text-l-max) - var(--text-l-min)) / (var(--vp-max) - var(--vp-min))))), calc(var(--text-l-max) * 1rem));
+    --text-xl-clamp: clamp(calc(var(--text-xl-min) * 1rem), calc(var(--text-xl-min) * 1rem + ((1vw - (var(--vp-min) / 100) * 1rem) * (100 * (var(--text-xl-max) - var(--text-xl-min)) / (var(--vp-max) - var(--vp-min))))), calc(var(--text-xl-max) * 1rem));
+    --text-xxl-clamp: clamp(calc(var(--text-xxl-min) * 1rem), calc(var(--text-xxl-min) * 1rem + ((1vw - (var(--vp-min) / 100) * 1rem) * (100 * (var(--text-xxl-max) - var(--text-xxl-min)) / (var(--vp-max) - var(--vp-min))))), calc(var(--text-xxl-max) * 1rem));
+    --space-m-min: var(--base-space-min);
+    --space-m-max: var(--base-space);
+    --space-xs-min: calc(var(--space-s-min) / var(--mob-space-scale));
+    --space-xs-max: calc(var(--space-s-max) / var(--space-scale));
+    --space-s-min: calc(var(--space-m-min) / var(--mob-space-scale));
+    --space-s-max: calc(var(--space-m-max) / var(--space-scale));
+    --space-l-min: calc(var(--space-m-min) * var(--mob-space-scale));
+    --space-l-max: calc(var(--space-m-max) * var(--space-scale));
+    --space-xl-min: calc(var(--space-l-min) * var(--mob-space-scale));
+    --space-xl-max: calc(var(--space-l-max) * var(--space-scale));
+    --space-xxl-min: calc(var(--space-xl-min) * var(--mob-space-scale));
+    --space-xxl-max: calc(var(--space-xl-max) * var(--space-scale));
+    --space-xs: var(--space-xs-pure);
+    --space-s: var(--space-s-pure);
+    --space-m: var(--space-m-pure);
+    --space-l: var(--space-l-pure);
+    --space-xl: var(--space-xl-pure);
+    --space-xxl: var(--space-xxl-pure);
+    --space-xs-calc: calc(var(--space-xs-min) * 1rem + (var(--space-xs-max) - var(--space-xs-min)) * ((100vw - (var(--vp-min) * 1rem)) / (var(--vp-max) - var(--vp-min))));
+    --space-s-calc: calc(var(--space-s-min) * 1rem + (var(--space-s-max) - var(--space-s-min)) * ((100vw - (var(--vp-min) * 1rem)) / (var(--vp-max) - var(--vp-min))));
+    --space-m-calc: calc(var(--space-m-min) * 1rem + (var(--space-m-max) - var(--space-m-min)) * ((100vw - (var(--vp-min) * 1rem)) / (var(--vp-max) - var(--vp-min))));
+    --space-l-calc: calc(var(--space-l-min) * 1rem + (var(--space-l-max) - var(--space-l-min)) * ((100vw - (var(--vp-min) * 1rem)) / (var(--vp-max) - var(--vp-min))));
+    --space-xl-calc: calc(var(--space-xl-min) * 1rem + (var(--space-xl-max) - var(--space-xl-min)) * ((100vw - (var(--vp-min) * 1rem)) / (var(--vp-max) - var(--vp-min))));
+    --space-xxl-calc: calc(var(--space-xxl-min) * 1rem + (var(--space-xxl-max) - var(--space-xxl-min)) * ((100vw - (var(--vp-min) * 1rem)) / (var(--vp-max) - var(--vp-min))));
+    --space-xs-clamp: clamp(var(--space-xs-min) * 1rem, calc(var(--space-xs-min) * 1rem + ((1vw - (var(--vp-min) / 100) * 1rem) * (100 * (var(--space-xs-max) - var(--space-xs-min)) / (var(--vp-max) - var(--vp-min))))), var(--space-xs-max) * 1rem);
+    --space-s-clamp: clamp(var(--space-s-min) * 1rem, calc(var(--space-s-min) * 1rem + ((1vw - (var(--vp-min) / 100) * 1rem) * (100 * (var(--space-s-max) - var(--space-l-min)) / (var(--vp-max) - var(--vp-min))))), var(--space-s-max) * 1rem);
+    --space-m-clamp: clamp(var(--space-m-min) * 1rem, calc(var(--space-m-min) * 1rem + ((1vw - (var(--vp-min) / 100) * 1rem) * (100 * (var(--space-m-max) - var(--space-m-min)) / (var(--vp-max) - var(--vp-min))))), var(--space-m-max) * 1rem);
+    --space-l-clamp: clamp(var(--space-l-min) * 1rem, calc(var(--space-l-min) * 1rem + ((1vw - (var(--vp-min) / 100) * 1rem) * (100 * (var(--space-l-max) - var(--space-l-min)) / (var(--vp-max) - var(--vp-min))))), var(--space-l-max) * 1rem);
+    --space-xl-clamp: clamp(var(--space-xl-min) * 1rem, calc(var(--space-xl-min) * 1rem + ((1vw - (var(--vp-min) / 100) * 1rem) * (100 * (var(--space-xl-max) - var(--space-xl-min)) / (var(--vp-max) - var(--vp-min))))), var(--space-xl-max) * 1rem);
+    --space-xxl-clamp: clamp(var(--space-xxl-min) * 1rem, calc(var(--space-xxl-min) * 1rem + ((1vw - (var(--vp-min) / 100) * 1rem) * (100 * (var(--space-xxl-max) - var(--space-xxl-min)) / (var(--vp-max) - var(--vp-min))))), var(--space-xxl-max) * 1rem);
+    --section-m-min: calc(var(--space-m-min) * var(--mob-space-adjust-section));
+    --section-m-max: calc(var(--space-m-max) * var(--space-adjust-section));
+    --section-xs-min: calc(var(--space-xs-min) * var(--mob-space-adjust-section));
+    --section-xs-max: calc(var(--space-xs-max) * var(--space-adjust-section));
+    --section-s-min: calc(var(--space-s-min) * var(--mob-space-adjust-section));
+    --section-s-max: calc(var(--space-s-max) * var(--space-adjust-section));
+    --section-l-min: calc(var(--space-l-min) * var(--mob-space-adjust-section));
+    --section-l-max: calc(var(--space-l-max) * var(--space-adjust-section));
+    --section-xl-min: calc(var(--space-xl-min) * var(--mob-space-adjust-section));
+    --section-xl-max: calc(var(--space-xl-max) * var(--space-adjust-section));
+    --section-xxl-min: calc(var(--space-xxl-min) * var(--mob-space-adjust-section));
+    --section-xxl-max: calc(var(--space-xxl-max) * var(--space-adjust-section));
+    --section-space-xs: var(--section-space-xs-pure);
+    --section-space-s: var(--section-space-s-pure);
+    --section-space-m: var(--section-space-m-pure);
+    --section-space-l: var(--section-space-l-pure);
+    --section-space-xl: var(--section-space-xl-pure);
+    --section-space-xxl: var(--section-space-xxl-pure);
+    --section-space-xs-calc: calc(var(--section-xs-min) * 1rem + (var(--section-xs-max) - var(--section-xs-min)) * ((100vw - (var(--vp-min) * 1rem)) / (var(--vp-max) - var(--vp-min))));
+    --section-space-s-calc: calc(var(--section-s-min) * 1rem + (var(--section-s-max) - var(--section-s-min)) * ((100vw - (var(--vp-min) * 1rem)) / (var(--vp-max) - var(--vp-min))));
+    --section-space-m-calc: calc(var(--section-m-min) * 1rem + (var(--section-m-max) - var(--section-m-min)) * ((100vw - (var(--vp-min) * 1rem)) / (var(--vp-max) - var(--vp-min))));
+    --section-space-l-calc: calc(var(--section-l-min) * 1rem + (var(--section-l-max) - var(--section-l-min)) * ((100vw - (var(--vp-min) * 1rem)) / (var(--vp-max) - var(--vp-min))));
+    --section-space-xl-calc: calc(var(--section-xl-min) * 1rem + (var(--section-xl-max) - var(--section-xl-min)) * ((100vw - (var(--vp-min) * 1rem)) / (var(--vp-max) - var(--vp-min))));
+    --section-space-xxl-calc: calc(var(--section-xxl-min) * 1rem + (var(--section-xxl-max) - var(--section-xxl-min)) * ((100vw - (var(--vp-min) * 1rem)) / (var(--vp-max) - var(--vp-min))));
+    --section-space-xs-clamp: clamp(calc(var(--section-xs-min) * 1rem), calc(var(--section-xs-min) * 1rem + ((1vw - (var(--vp-min) / 100) * 1rem) * (100 * (var(--section-xs-max) - var(--section-xs-min)) / (var(--vp-max) - var(--vp-min))))), calc(var(--section-xs-max) * 1rem));
+    --section-space-s-clamp: clamp(calc(var(--section-s-min) * 1rem), calc(var(--section-s-min) * 1rem + ((1vw - (var(--vp-min) / 100) * 1rem) * (100 * (var(--section-s-max) - var(--section-s-min)) / (var(--vp-max) - var(--vp-min))))), calc(var(--section-s-max) * 1rem));
+    --section-space-m-clamp: clamp(calc(var(--section-m-min) * 1rem), calc(var(--section-m-min) * 1rem + ((1vw - (var(--vp-min) / 100) * 1rem) * (100 * (var(--section-m-max) - var(--section-m-min)) / (var(--vp-max) - var(--vp-min))))), calc(var(--section-m-max) * 1rem));
+    --section-space-l-clamp: clamp(calc(var(--section-l-min) * 1rem), calc(var(--section-l-min) * 1rem + ((1vw - (var(--vp-min) / 100) * 1rem) * (100 * (var(--section-l-max) - var(--section-l-min)) / (var(--vp-max) - var(--vp-min))))), calc(var(--section-l-max) * 1rem));
+    --section-space-xl-clamp: clamp(calc(var(--section-xl-min) * 1rem), calc(var(--section-xl-min) * 1rem + ((1vw - (var(--vp-min) / 100) * 1rem) * (100 * (var(--section-xl-max) - var(--section-xl-min)) / (var(--vp-max) - var(--vp-min))))), calc(var(--section-xl-max) * 1rem));
+    --section-space-xxl-clamp: clamp(calc(var(--section-xxl-min) * 1rem), calc(var(--section-xxl-min) * 1rem + ((1vw - (var(--vp-min) / 100) * 1rem) * (100 * (var(--section-xxl-max) - var(--section-xxl-min)) / (var(--vp-max) - var(--vp-min))))), calc(var(--section-xxl-max) * 1rem));
+    --section-xs: var(--section-space-xs) var(--section-padding-x);
+    --section-s: var(--section-space-s) var(--section-padding-x);
+    --section-m: var(--section-space-m) var(--section-padding-x);
+    --section-l: var(--section-space-l) var(--section-padding-x);
+    --section-xl: var(--section-space-xl) var(--section-padding-x);
+    --section-xxl: var(--section-space-xxl) var(--section-padding-x);
+    --radius-xs: calc(var(--radius-s) / var(--radius-scale));
+    --radius-s: calc(var(--base-radius) / var(--radius-scale));
+    --radius-m: var(--base-radius);
+    --radius-l: calc(var(--base-radius) * var(--radius-scale));
+    --radius-xl: calc(var(--radius-l) * var(--radius-scale));
+    --radius-xxl: calc(var(--radius-xl) * var(--radius-scale));
+    --radius-50: 50%;
+    --width-xs: calc(var(--vp-max) * .1 * 1rem);
+    --width-s: calc(var(--vp-max) * .2 * 1rem);
+    --width-m: calc(var(--vp-max) * .4 * 1rem);
+    --width-l: calc(var(--vp-max) * .6 * 1rem);
+    --width-xl: calc(var(--vp-max) * .8 * 1rem);
+    --width-xxl: calc(var(--vp-max) * .9 * 1rem);
+    --width-vp-max: calc((var(--vp-max) - var(--base-space) * 2) * 1rem);
+    --width-50: calc((var(--vp-max) / 2) * 1rem);
+}
+
+:root {
+    --grid-break--2: calc(((var(--vp-max) - (var(--base-space) * 2)) * 1rem) / 2.99);
+    --grid-break--3: calc(((var(--vp-max) - (var(--base-space) * 2)) * 1rem) / 3.99);
+    --grid-break--4: calc(((var(--vp-max) - (var(--base-space) * 2)) * 1rem) / 4.99);
+    --grid-break--5: calc(((var(--vp-max) - (var(--base-space) * 2)) * 1rem) / 5.99);
+    --grid-break--6: calc(((var(--vp-max) - (var(--base-space) * 2)) * 1rem) / 6.99);
+}
+
+/* END Framework, spacing, text size, colors, grid breaking */
+
+/* START padding utility classes */
+
+.pad-header--xxl {
+    padding-top: var(--space-xxl);
+    padding-bottom: var(--space-xxl);
+}
+
+.pad-header--xl {
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-xl);
+}
+
+.pad-header--l {
+    padding-top: var(--space-l);
+    padding-bottom: var(--space-l);
+}
+
+.pad-header--m {
+    padding-top: var(--space-m);
+    padding-bottom: var(--space-m);
+}
+
+.pad-header--s {
+    padding-top: var(--space-s);
+    padding-bottom: var(--space-s);
+}
+
+.pad-header--xs {
+    padding-top: var(--space-xs);
+    padding-bottom: var(--space-xs);
+}
+
+.pad--none {
+    padding: 0;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.pad--xxl {
+    padding: var(--space-xxl);
+}
+
+.pad--xl {
+    padding: var(--space-xl);
+}
+
+.pad--l {
+    padding: var(--space-l);
+}
+
+.pad--m {
+    padding: var(--space-m);
+}
+
+.pad--s {
+    padding: var(--space-s);
+}
+
+.pad--xs {
+    padding: var(--space-xs);
+}
+
+.pad-section--none {
+    padding: 0 var(--space-m);
+}
+
+.pad-section--xxl {
+    padding: var(--section-xxl);
+}
+
+.pad-section--xl {
+    padding: var(--section-xl);
+}
+
+.pad-section--l {
+    padding: var(--section-l);
+}
+
+.pad-section--s {
+    padding: var(--section-s);
+}
+
+.pad-section--xs {
+    padding: var(--section-xs);
+}
+
+/* END padding utility classes */
+
+/* START button utility classes */
+
+.btn--white {
+    --btn-bg: var(--btn-white-bg);
+    --btn-text-color: var(--btn-white-text);
+    --btn-hover: var(--btn-white-hover);
+    --btn-hover-text: var(--btn-white-hover-text);
+    --btn-border-color: var(--btn-white-border-color);
+    --btn-outline-text: var(--white-outline-btn-text);
+    --btn-outline-hover-text: var(--white-outline-hover-text);
+}
+
+.btn--black {
+    --btn-bg: var(--btn-black-bg);
+    --btn-text-color: var(--btn-black-text);
+    --btn-hover: var(--btn-black-hover);
+    --btn-hover-text: var(--btn-black-hover-text);
+    --btn-border-color: var(--btn-black-border-color);
+    --btn-outline-text: var(--black-outline-btn-text);
+    --btn-outline-hover-text: var(--black-outline-hover-text);
+}
+
+.btn--base {
+    --btn-bg: var(--btn-base-bg);
+    --btn-text-color: var(--btn-base-text);
+    --btn-hover: var(--btn-base-hover);
+    --btn-hover-text: var(--btn-base-hover-text);
+    --btn-border-color: var(--btn-base-border-color);
+    --btn-outline-text: var(--base-outline-btn-text);
+    --btn-outline-hover-text: var(--base-outline-hover-text);
+}
+
+.btn--accent {
+    --btn-bg: var(--btn-accent-bg);
+    --btn-text-color: var(--btn-accent-text);
+    --btn-hover: var(--btn-accent-hover);
+    --btn-hover-text: var(--btn-accent-hover-text);
+    --btn-border-color: var(--btn-accent-border-color);
+    --btn-outline-text: var(--accent-outline-btn-text);
+    --btn-outline-hover-text: var(--accent-outline-hover-text);
+}
+
+.btn--secondary {
+    --btn-bg: var(--btn-secondary-bg);
+    --btn-text-color: var(--btn-secondary-text);
+    --btn-hover: var(--btn-secondary-hover);
+    --btn-hover-text: var(--btn-secondary-hover-text);
+    --btn-border-color: var(--btn-secondary-border-color);
+    --btn-outline-text: var(--secondary-outline-btn-text);
+    --btn-outline-hover-text: var(--secondary-outline-hover-text);
+}
+
+
+.btn--primary {
+    --btn-bg: var(--btn-primary-bg);
+    --btn-text-color: var(--btn-primary-text);
+    --btn-hover: var(--btn-primary-hover);
+    --btn-hover-text: var(--btn-primary-hover-text);
+    --btn-border-color: var(--btn-primary-border-color);
+    --btn-outline-text: var(--primary-outline-btn-text);
+    --btn-outline-hover-text: var(--primary-outline-hover-text);
+}
+
+.c-btn-xs {
+    font-size: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.btn--s {
+    --btn-text-size: var(--text-s);
+}
+
+.btn--m {
+    --btn-text-size: var(--text-m);
+}
+
+.btn--l {
+    --btn-text-size: var(--text-l);
+}
+
+.btn--xl {
+    --btn-text-size: var(--text-xl);
+}
+
+.btn--xxl {
+    --btn-text-size: var(--text-xxl);
+}
+
+:is(.btn--xs, .btn--s, .btn--m, .btn--l, .btn--xl, .btn--xxl) {
+    font-size: var(--btn-text-size);
+}
+
+:is(.btn--xs, .btn--s, .btn--m, .btn--l, .btn--xl, .btn--xxl, .btn--primary, .btn--secondary, .btn--accent, .btn--base, .btn--white, .btn--black) {
+    background: var(--btn-bg, var(--btn-primary-bg));
+    border-width: var(--btn-border-size);
+    border-color: var(--btn-border-color, var(--btn-primary-border-color));
+    border-radius: var(--btn-radius);
+    line-height: 1.2;
+    padding: var(--btn-pad-y) var(--btn-pad-x);
+    font-size: var(--btn-text-size, var(--text-m));
+    color: var(--btn-text-color, var(--btn-primary-text));
+}
+
+:is(.btn--xs, .btn--s, .btn--m, .btn--l, .btn--xl, .btn--xxl, .btn--primary, .btn--secondary, .btn--accent, .btn--base, .btn--white, .btn--black):hover {
+    background: var(--btn-hover, var(--btn-primary-hover));
+    border-color: var(--btn-hover, var(--btn-primary-hover-border-color));
+    color: var(--btn-hover-text, var(--btn-primary-hover-text));
+    text-decoration:none;
+}
+
+/* END button utility classes */
+
+/* START Typography */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Source Sans Pro';
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: var(--text-xxl);
+    --text-size: var(--text-xxl);
+}
+
+h2 {
+    font-size: var(--text-xl);
+    --text-size: var(--text-xl);
+}
+
+h3 {
+    font-size: var(--text-l);
+    --text-size: var(--text-l);
+}
+
+h4 {
+    font-size: var(--text-m);
+    --text-size: var(--text-m);
+}
+
+h5 {
+    font-size: max(var(--text-s-stop), var(--text-s));
+    --text-size: var(--text-s);
+}
+
+.text--xs,
+h6 {
+    font-size: max(var(--text-xs-stop), var(--text-xs));
+    --text-size: var(--text-xs);
+}
+
+.text--xxl {
+    font-size: var(--text-xxl);
+    --text-size: var(--text-xxl);
+}
+
+.text--xl {
+    font-size: var(--text-xl);
+    --text-size: var(--text-xl);
+}
+
+.text--l {
+    font-size: var(--text-l);
+    --text-size: var(--text-l);
+}
+
+.text--m {
+    font-size: var(--text-m);
+    --text-size: var(--text-m);
+}
+
+.text--s {
+    font-size: max(var(--text-s-stop), var(--text-s));
+    --text-size: var(--text-s);
+}
+
+/* Typography Decor Utility Classes */
+
+.c-underline {
+    text-decoration: underline;
+}
+
+.c-lowercase {
+    text-transform: lowercase;
+}
+
+.c-uppercase {
+    text-transform: uppercase;
+}
+
+.c-bold {
+    font-weight: 600;
+}
+
+.c-italic {
+    font-style: italic;
+}
+
+/* END Typography */
+
+/* Card Utility Classes */
+
+.c-card-light {
+    background-color: var(--shade-white);
+    width: 100%;
+    position: relative;
+    box-shadow-color: rgba(0, 0, 0, 0.08);
+    box-shadow-horizontal-offset: 0;
+    box-shadow-vertical-offset: 5;
+    box-shadow-blur: 15;
+    border-radius: 7px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.c-card-dark {
+    width: 100%;
+    border-radius: 7px;
+    background-color: var(--base);
+    box-shadow-color: rgba(0, 0, 0, 0.08);
+    box-shadow-horizontal-offset: 0;
+    box-shadow-vertical-offset: 5;
+    box-shadow-blur: 15;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.c-card-accent {
+    background-color: var(--accent);
+    border-radius: 7px;
+    width: 100%;
+    box-shadow-horizontal-offset: 0;
+    box-shadow-vertical-offset: 5;
+    box-shadow-blur: 15;
+    box-shadow-color: rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Owl Spacing*/
+
+.owl--xs>*+* {
+    margin-top: var(--xs-space);
+}
+
+.owl--s>*+* {
+    margin-top: var(--s-space);
+}
+
+.owl-spacing--m>*+* {
+    margin-top: var(--m-space);
+}
+
+.owl-spacing--l>*+* {
+    margin-top: var(--l-space);
+}
+
+.owl-spacing--xl>*+* {
+    margin-top: var(--xl-space);
+}
+
+
+/* Max width utility classes */
+
+.c-max-width-320 {
+    max-width: 320px;
+}
+
+.c-max-width-480 {
+    max-width: 480px;
+}
+
+.c-max-width-640 {
+    max-width: 640px;
+}
+
+.c-max-width-960 {
+    max-width: 960px;
+}
+
+.c-max-width-1120 {
+    max-width: 1120px;
+}
+
+/* Effects */
+
+.c-transition {
+    transition-duration: 0.5s;
+}
+
+/*Gap */
+
+.gap--xxl {
+  gap: var(--space-xxl);
+  --grid-gap: var(--space-xxl);
+}
+.gap--xl {
+  gap: var(--space-xl);
+  --grid-gap: var(--space-xl);
+}
+.gap--l {
+  gap: var(--space-l);
+  --grid-gap: var(--space-l);
+}
+.gap--m {
+  gap: var(--space-m);
+  --grid-gap: var(--space-m);
+}
+.gap--s {
+  gap: var(--space-s);
+  --grid-gap: var(--space-s);
+}
+.gap--xs {
+  gap: var(--space-xs);
+  --grid-gap: var(--space-xs);
+}
+
+
+
+
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: var(--text-primary);
+}
+
+.space-between-blocks {
+    padding-top: var(--space-between-blocks-small-screens);
+    padding-bottom: var(--space-between-blocks-small-screens);
+}
+
+@media (min-width: 992px) {
+    .space-between-blocks {
+        padding-top: var(--space-between-blocks);
+        padding-bottom: var(--space-between-blocks);
+    }
+}
+
+/* Buttons */
+
+button {
+    color: inherit;
+    padding: 0;
+    background: none;
+    border: none;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.btn {
+    font-size: 0.87rem;
+    padding: 0.8rem 1.6rem;
+    border: none;
+    border-radius: var(--elements-roundness);
+    transition: 0.2s all;
+}
+
+@media (min-width: 992px) {
+    .btn {
+        padding: 0.8rem 2rem;
+    }
+}
+
+.btn,
+.btn:hover,
+.btn:focus {
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.btn:hover,
+.btn:focus {
+    transform: scale(1.05);
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus {
+    background: var(--gradient-primary, --primary);
+    color: var(--primary-invert);
+}
+
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+    background: var(--gradient-secondary, --secondary);
+    color: var(--secondary-invert);
+}
+
+.btn-primary--empty,
+.btn-primary--empty:hover,
+.btn-primary--empty:focus {
+    color: var(--primary);
+}
+
+.btn-sm {
+    padding: 0.8rem;
+}
+
+.highlight {
+    color: var(--primary)
+}
+
+/* block header */
+
+.block__header {
+    margin-bottom: 4rem;
+}
+
+.block__title {
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 1.4;
+}
+
+@media(min-width: 992px) {
+    .block__title {
+        font-size: 2.5rem;
+    }
+
+    .block__title--big {
+        font-size: 3rem;
+        line-height: 1.1;
+    }
+}
+
+@media(min-width: 1200px) {
+    .block__title--big {
+        font-size: 3.5rem;
+        line-height: 1.2;
+    }
+}
+
+.block__paragraph {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    opacity: .9;
+}
+
+@media(min-width: 992px) {
+    .block__paragraph--big {
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+}
+
+/* Icons */
+
+.fr-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.04);
+    margin-bottom: 1.5rem;
+    transition: .5s;
+}
+
+.fr-icon--medium {
+    font-size: 1.5rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.fr-icon--large {
+    font-size: 1.2rem;
+    height: 3.25rem;
+    width: 3.25rem;
+}
+
+@media (min-width: 992px) {
+    .fr-icon--large {
+        height: 3.8rem;
+        width: 3.8rem;
+        font-size: 1.9rem;
+    }
+}
+
+
+
+
+/* Montserrat Extra Bold + Source Serif Pro */
+
+.title,
+h1,
+h1 a,
+h2,
+h2 a,
+h3,
+h3 a,
+h4,
+h4 a,
+h5,
+h5 a,
+h6,
+h6 a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: var(--base);
+}
+
+body,
+p {
+    color: var(--base);
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 300;
+}
+
+*,
+input,
+textarea {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+/* ====================
+Color Palette #21
+==================== */
+
+/* Red */
+
+a,
+.mainNav li:hover>a,
+.mainNav>ul>li.active>a,
+.mainNav .parent a svg,
+label .required,
+.social a {
+    color: var(--primary);
+    text-decoration:  none;
+}
+
+.phone,
+.button,
+input[type="submit"] {
+    background: var(--primary);
+}
+
+a.phone:hover {
+    background: var(--primary-hover) !important;
+    color: #fff;
+}
+
+/* Gray */
+
+footer {
+    background: var(--base);
+}
+
+/* Overlays */
+
+.hero-overlay {
+    background: #d6d3ddd4
+}
+
+.full-space-overlay,
+.contact-overlay {
+    background: var(--base);
+}
+
+/* Misc */
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    color: #4a4a4a;
+}
+
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover {
+    color: #999;
+}
+
+.home .contact .formTitle+p {
+    color: #fff;
+}
+
+.social a:hover {
+    color: #999;
+}
+
+/* ====================
+Background Images
+==================== */
+
+.hero {
+    background-image: url(https://s3.amazonaws.com/law-media/uploads/2850/169252/large/Stopcounterfeiting-happy-business.jpg);
+}
+
+.full-space {
+    background-image: url();
+}
+
+.home .contact {
+    background-image: url();
+}
+
+/* ====================
+Custom
+==================== */
+
+.hero {
+    background-position-y: 120px;
+    background-attachment: initial;
+}
+
+.navPhone {
+    display: none;
+}
+
+.mobile-menu {
+    background: var(--secondary);
+}
+
+.mobile-menu a,
+.mobile-menu h3,
+.mobile-menu .nav-toggle {
+    color: var(--base);
+}
+
+.mobile-menu a:hover {
+    color: var(--base-hover);
+}
+
+.nav-toggle .fa-times:hover {
+    color: var(--primary-hover) !important;
+}
+
+#siteCanvas .fa-bars {
+    color: var(--secondary);
+}
+
+#siteCanvas .fa-bars:hover {
+    color: var(--primary-hover);
+}
+
+.lslide p a {
+    background: var(--primary) !important;
+}
+
+.lslide p a:hover {
+    background: var(--primary-hover) !important;
+}
+
+@media screen and (min-width: 62em) {
+
+    .navPhone {
+        display: block !important;
+        margin-right: 2em;
+        color: var(--secondary);
+        /*font-size: 1.25em;*/
+        font-weight: 600;
+    }
+
+    .navPhone:hover {
+        color: var(--primary);
+    }
+}
+
+header {
+    background: var(--base);
+}
+
+.mainNav a {
+    color: var(--secondary);
+}
+
+.phone::before {
+    display: none;
+}
+
+@media screen and (min-width: 62em) {
+
+    .shoutout {
+        margin: 0 2em 1em 5em !important;
+        text-align: left;
+    }
+}
+
+.shoutout {
+    margin: 0 auto;
+    text-align: left;
+}
+
+.shoutout h1,
+.shoutout p {
+    color: var(--base);
+}
+
+.scroller {
+    display: none !important;
+}
+
+/* ====================
+Homebody Section1
+==================== */
+
+.section1 {
+    background: var(--base);
+    text-align: center;
+    padding: 12rem 1rem 12rem !important;
+    position: relative;
+    z-index: 1;
+}
+
+@media screen and (min-width: 62em) {
+
+    .section1 {
+        padding: 12rem 1rem 20rem !important;
+    }
+
+    .section1 .homebody-content {
+        max-width: 736px;
+    }
+
+}
+
+/* SVG background */
+
+#insertion_333759 {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    background: transparent;
+    margin-bottom: 0;
+}
+
+.section1 h2 {
+    font-size: 3em;
+}
+
+.section1 h2 span {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.section1 h2,
+.section1 p {
+    color: #fff;
+}
+
+.section1 .customBtn1 {
+    background: var(--primary);
+    color: var(--secondary);
+    margin: 1em;
+    padding: 1em;
+    text-align: center;
+    width: 200px;
+}
+
+
+.phone,
+input[type="submit"] {
+    margin: 0 auto;
+    width: auto;
+    font-size: 1em;
+    border-radius: 0;
+}
+
+.section1 .buttons {
+    text-align: center;
+    justify-content: center !important;
+    margin-top: 2em;
+}
+
+.buttons input[type="submit"]:hover {
+    background: var(--primary-hover);
+}
+
+.section1 .customBtn2 {
+    background: var(--secondary);
+    color: var(--base);
+    margin: 1em;
+    padding: 1em;
+    text-align: center;
+    width: 200px;
+}
+
+.section1 .customBtn1:hover {
+    background: var(--primary-hover) !important;
+    color: var(--secondary) !important;
+    text-decoration: none;
+}
+
+.section1 .customBtn2:hover {
+    background: var(--secondary-hover) !important;
+    color: var(--base) !important;
+    text-decoration: none;
+}
+
+/* ====================
+Homebody Section2
+==================== */
+
+.section2 {
+    background: var(--primary);
+    text-align: center;
+}
+
+.section2 h2 {
+    font-size: 2em;
+}
+
+.section2 h2,
+.section2 p {
+    color: #fff;
+}
+
+@media screen and (min-width: 62em) {
+
+    .videowrap {
+        max-width: 40%;
+        margin: 1em auto;
+    }
+}
+
+
+.video-responsive {
+    overflow: hidden;
+    padding-top: 56.25%;
+    position: relative;
+    height: 0;
+}
+
+.video-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+
+/* Scrolling Recommendations */
+
+.full-space {
+    display: none;
+}
+
+.home .primary {
+    padding: 0;
+}
+
+.recommendations-slider {
+    background-image: url(https://s3.amazonaws.com/law-media/layouts/110/assets/img/footer.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2.5rem 5%;
+    position: relative;
+    z-index: 1;
+}
+
+.recommendations-slider:before {
+    background: var(--base);
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+.recommendations-slider .insertion.widget {
+    background: transparent;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.recommendations-slider .insertion.widget h4 {
+    background: none;
+    color: #fff;
+    display: block;
+}
+
+.recommendations-slider .widget.recommendations ul li {
+    border: none;
+    margin: 0;
+    padding: 0 2%;
+}
+
+.recommendations-slider .widget.recommendations ul li h5 {
+    font-size: 1.5rem;
+}
+
+.recommendations-slider .widget.recommendations ul li h5 a {
+    color: #fff;
+}
+
+.recommendations-slider .widget.recommendations ul li h5 a:hover {
+    color: #999;
+}
+
+.recommendations-slider .widget.recommendations ul li p {
+    color: #fff;
+}
+
+.recommendations-slider .widget.recommendations ul li p a {
+    background: #c01818;
+    color: #fff;
+    display: inline-block;
+    font-size: 1em;
+    margin-top: 1.5em;
+    padding: 1em;
+    transition: .2s background;
+}
+
+.recommendations-slider .widget.recommendations ul li p a:hover {
+    color: #fff;
+    background: #999;
+}
+
+.lSAction>.lSPrev {
+    left: 0;
+}
+
+.lSAction>.lSNext {
+    right: 0;
+}
+
+.main {
+    padding: 2.5em 5%;
+}
+
+@media screen and (min-width: 62em) {
+
+    .home .primary {
+        padding: 0;
+    }
+
+    .home .primary .content {
+        max-width: none;
+    }
+
+    .recommendations-slider {
+        padding: 8em 1em;
+    }
+
+    .recommendations-slider .widget.recommendations ul li h5 {
+        font-size: 1.75rem;
+    }
+
+    .main {
+        padding: 6em 1em;
+    }
+
+    .main-content {
+        margin: 0 auto;
+        max-width: 62em;
+    }
+
+}
+
+/* ====================
+MTA
+==================== */
+
+.home .primary .content {
+    max-width: none;
+    margin: 0 auto;
+}
+
+.home .primary {
+    padding: 0;
+}
+
+.home .primary-wrapper {
+    padding: 6em 1em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.meetAttorney {
+    text-align: center;
+    background: var(--secondary);
+    padding: 3em
+}
+
+.meetAttorney-wrap h2 {
+    font-size: 1.75em;
+    margin-bottom: 0;
+}
+
+.meetAttorney-wrap h2:after {
+    background: var(--primary);
+    content: '';
+    display: block;
+    height: 2px;
+    margin: 1em auto;
+    width: 55px;
+}
+
+.partner {
+    margin: 6em auto 0;
+    max-width: 600px;
+}
+
+.partner-wrap img {
+    left: 0;
+    margin: -60px auto 0;
+    position: absolute;
+    right: 0;
+    width: 120px;
+    z-index: 999;
+}
+
+.partner-content {
+    background: #fff;
+    border: 1px solid #ececec;
+    padding: 5em 2em 2em;
+}
+
+.partner h3 {
+    font-family: 'Raleway', sans-serif !important;
+    font-size: 1.125em;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.button {
+    background: var(--primary);
+    color: #fff;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 400;
+    margin-top: 2rem;
+    padding: 1em;
+    text-transform: none;
+    border-radius: 0;
+}
+
+.button:hover {
+    color: #fff;
+    background: var(--primary-hover);
+}
+
+@media screen and (min-width: 62em) {
+
+    .meetAttorney-wrap {
+        padding: 6em 1em;
+    }
+
+    .meetAttorney-wrap {
+        display: block;
+        margin: 0 auto;
+        max-width: 62em;
+    }
+
+    .meetAttorney-wrap h2 {
+        font-size: 2.5em;
+    }
+
+    .meetAttorney-wrap h2:after {
+        width: 75px;
+    }
+
+    .partners-wrap {
+        display: flex;
+    }
+
+    .partner-wrap {
+        flex-basis: 50%;
+        position: static;
+        z-index: 1;
+    }
+
+    .partner-wrap:first-of-type {
+        padding-right: 2em;
+    }
+
+    .partner-wrap:last-of-type {
+        padding-left: 2em;
+    }
+
+    .partner-wrap img {
+        margin: -25px auto;
+        position: static;
+        width: 180px;
+        filter: brightness(28%) saturate(2);
+    }
+
+    .partner {
+        margin: -50px 0 auto;
+        z-index: -1;
+    }
+
+    .partner-content {
+        padding: 6em 2em 2em;
+    }
+
+}
+
+.practice-areas {
+    display: none;
+}
+
+input[type=checkbox] {
+    width: 2% !important;
+    height: 12px !important;
+}
+
+.cta-link {
+    background: var(--primary);
+    bottom: 16px;
+    color: #fff;
+    display: block;
+    padding: 14px 24px;
+    position: fixed;
+    right: 16px;
+    z-index: 110;
+}
+
+.cta-link:hover {
+    background: var(--primary-hover);
+    color: #fff;
+}
+
+.spaces {
+    background: var(--secondary);
+}
+
+.footer-nav a,
+.copyright p,
+.group-disclaimer ul li a {
+    color: #fff;
+}
+
+@media screen and (min-width: 62em) {
+    .mainNav {
+        flex-basis: 65%;
+    }
+}
+
+/*------------------------------*/
+/*--Stats & Numbers----------------*/
+/*------------------------------*/
+.block-35 {
+    --block-background: white;
+    --block-text-color: var(--text-primary);
+    background: var(--block-background);
+    color: var(--block-text-color)
+}
+
+.stats__li {
+    width: 70%;
+    margin: auto;
+    border-bottom: 1px solid var(--primary);
+    padding: 1.5rem 0 !important;
+    list-style-type: none;
+}
+
+
+.stats__li:last-child {
+    border-bottom: none
+}
+
+@media(min-width:576px) {
+    .stats__li {
+        width: 100%;
+        border-right: 1px solid var(--primary);
+        padding: 1.5rem 0 !important;
+        list-style-type: none;
+    }
+
+    .stats__li:nth-child(3),
+    .stats__li:nth-child(4) {
+        border-bottom: none
+    }
+
+    .stats__li:nth-child(even) {
+        border-right: none
+    }
+}
+
+@media(min-width:992px) {
+    .stats__li {
+        border-bottom: none;
+        border-right: none !important;
+        list-style-type: none;
+    }
+
+
+
+    .stats__li::after {
+        content: '';
+        display: inline-block;
+        height: 51%;
+        border-right: 1px solid #eee;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto
+    }
+}
+
+.stats__number {
+    color: var(--primary);
+    font-size: 4.3rem;
+    font-weight: 600
+}
+
+.stats__text {
+    font-size: .87rem;
+    opacity: .9
+}
+
+</style>
